@@ -8,7 +8,7 @@ hangPy is similar to the iconic pen and paper word guessing game, hangman
 <img src="assets/images/First_screenshot.jpg">
 <br>
 <br>
-<img src="assets/images/second_screenshot.jpg">
+<img src="assets/images/Second_screenshot.jpg">
 <br>
 <br>
 <img src="assets/images/Third_screenshot.jpg">
