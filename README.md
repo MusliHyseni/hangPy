@@ -1,2 +1,14 @@
-# Python Hangman
- Simple python hangman game
+# hangPy
+<b>hangPy is a simple terminal game, written in pure Python
+<br>
+<br>
+hangPy is similar to the iconic pen and paper word guessing game, hangman
+<br>
+<br>
+<img src="assets/images/First_screenshot.jpg">
+<br>
+<br>
+<img src="assets/images/second_screenshot.jpg">
+<br>
+<br>
+<img src="assets/images/Third_screenshot.jpg">
