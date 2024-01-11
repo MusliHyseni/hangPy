@@ -104,10 +104,9 @@ word = word_list[random.randint(0, len(word_list)-1)]
 word_hint = word_dict[word]
 
 def initialization():
-    wants_to_start = input("Want to start? (y/n):")
-    if wants_to_start.lower() == "y":
-        time.sleep(0.5)
+        time.sleep(1)
         print("Let's go!")
+
         
 def game(iteration):
     print(states[iteration])
@@ -120,7 +119,7 @@ def game(iteration):
     else:
         print(f"You win! \nIt took you {iteration} tries to guess correctly.")
         print(f"\nYour tries: {guessed_words}.")
-        guessed_words.append("Guessed")
+        guessed_words.append("Guessed");
     
     
 while iteration <= limit & guessed == False:
@@ -130,4 +129,9 @@ while iteration <= limit & guessed == False:
     if guessed_words[-1] == "Guessed":
         random.seed(iteration if iteration != 4 else random.randint(5, 12))
     iteration+=1
+        
+        
+                
+                
+            
         
