@@ -1,9 +1,5 @@
 import random, time
 
-random.seed(4)
-
-
-
 # The word_dict dictionary contains word : hint pairs.
 word_dict = {
     "Delicious":"Adj. -Has good taste.",
@@ -102,9 +98,10 @@ states = ['   _____ \n'
                     '  |    / \ \n'
                     '__|__\n',]  
 guessed_words = []
+guessed = False
 print("This is a simple hangman game. \nYou have 10 tries to guess what word I'm thinking of.")
-word = word_dict.keys(random.randint(0, len(word_dict.keys)-1))
-word_hint = word_dict[word_dict.keys(random.randint(0, len(word_dict.keys)-1))]
+word = word_list[random.randint(0, len(word_list)-1)]
+word_hint = word_dict[word]
 
 def initialization():
     wants_to_start = input("Want to start? (y/n):")
@@ -119,17 +116,18 @@ def game(iteration):
     if guessed != word:
         print("WRONG GUESS!")
         iteration += 1
+        game(iteration)
     else:
         print(f"You win! \nIt took you {iteration} tries to guess correctly.")
+        print(f"\nYour tries: {guessed_words}.")
+        guessed_words.append("Guessed")
     
-while iteration <= limit:
+    
+while iteration <= limit & guessed == False:
     if iteration == 0:
         initialization()
-    game()
+    game(iteration)
+    if guessed_words[-1] == "Guessed":
+        random.seed(iteration if iteration != 4 else random.randint(5, 12))
     iteration+=1
-        
-        
-                
-                
-            
         
